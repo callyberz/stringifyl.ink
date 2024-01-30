@@ -20,7 +20,6 @@ export async function getEditPermission(postId?: string) {
     cookies().set("user", uuidv4());
     return;
   }
-  console.log("GGGGG ", userFromCookies.value);
 
   const post = await db.post.findUnique({
     where: {
